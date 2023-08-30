@@ -12,6 +12,7 @@ public class CalculoImcActivity extends AppCompatActivity {
     Button calcularImc;
     EditText editPeso;
     EditText editAltura;
+    Button limpar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,7 @@ public class CalculoImcActivity extends AppCompatActivity {
         editAltura = findViewById(R.id.editTextAltura);
         resultado = findViewById(R.id.textViewImc);
         calcularImc = findViewById(R.id.calcular);
+        limpar = findViewById(R.id.limpar);
 
         calcularImc.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,7 +30,14 @@ public class CalculoImcActivity extends AppCompatActivity {
                 calcular();
             }
         });
+        limpar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                limpar();
+            }
+        });
     }
+
     private void calcular(){
         float peso = Float.parseFloat(editPeso.getText().toString());
         float altura = Float.parseFloat(editAltura.getText().toString());
@@ -47,5 +56,9 @@ public class CalculoImcActivity extends AppCompatActivity {
         }
         resultado.setText("IMC: " + String.format("%.2f", res ) + " " + info);
 
+    }
+    private void limpar(){
+        editPeso.setText("");
+        editAltura.setText("");
     }
 }

@@ -8,11 +8,12 @@
     tools:context=".CalculoImcActivity">
 
     <android.support.constraint.ConstraintLayout
+        android:id="@+id/limpa"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".CalculoImcActivity"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="194dp">
+        tools:layout_editor_absoluteY="72dp">
 
         <EditText
             android:id="@+id/editTextPeso"
@@ -60,7 +61,6 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="44dp"
             android:layout_marginEnd="8dp"
-            android:text="TextView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -73,10 +73,11 @@
             android:text="Limpar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.103"
+            app:layout_constraintHorizontal_bias="0.156"
             app:layout_constraintStart_toEndOf="@+id/calcular"
             app:layout_constraintTop_toBottomOf="@+id/editTextAltura"
-            app:layout_constraintVertical_bias="0.008" />
+            app:layout_constraintVertical_bias="0.012" />
+
 
     </android.support.constraint.ConstraintLayout>
 
