@@ -60,5 +60,7 @@ public class CalculoImcActivity extends AppCompatActivity {
     private void limpar(){
         editPeso.setText("");
         editAltura.setText("");
+        resultado.setText("");
+
     }
 }
